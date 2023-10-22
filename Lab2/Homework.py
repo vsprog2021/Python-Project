@@ -57,7 +57,7 @@ def conversie_anglia(cuvant):
 def palindromastic(numar):
     numari = str(numar)
     length = len(numari)
-    for lit in range(length // 2, 0, +1):
+    for lit in range(length // 2):
         if numari[lit] != numari[length-1 - lit]:
             return False
     return True
@@ -66,7 +66,7 @@ def palindromastic(numar):
 def extrage_numarul(sir_de_c):
     lenn = len(sir_de_c)
     numar = ""
-    for i in range(lenn, 0, +1):
+    for i in range(lenn):
         if sir_de_c[i].isDigit():
             numar += sir_de_c[i]
     return numar
@@ -89,7 +89,7 @@ def cea_mai_folosita_litera(sir_de_c):
     for lit in sir_de_c:
         vector_de_frecv[ord(lit) - ord('a')] += 1
     cele_mai_multe_instante = max(vector_de_frecv)
-    for i in range(26, 0, +1): #also: for i in range(26), bcs it's by deafult (26, 0, +1)
+    for i in range(26):
         if vector_de_frecv[i] == cele_mai_multe_instante:
             return chr(i + ord('a'))
         
